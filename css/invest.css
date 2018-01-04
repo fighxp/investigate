@@ -1,0 +1,92 @@
+/*common*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  font-family: Helvetica;
+}
+ol,
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  outline: none;
+  color: #666;
+  text-decoration: none;
+}
+a:foucus {
+  outline: none;
+}
+a:hover {
+  color: #333;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix:before,
+.clearfix:after {
+  clear: both;
+  content: '';
+}
+.padd10,
+.iheader,
+ul.billsinfo {
+  padding: 0 10px;
+}
+.martop,
+.maincon {
+  margin-top: 62px;
+}
+.iheader {
+  width: 100%;
+  height: 52px;
+  background-color: #ececec;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+}
+.iheader h3 {
+  font-size: 0.28rem;
+  color: #333;
+  line-height: 52px;
+}
+ul.billsinfo > li {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  line-height: 42px;
+  font-size: 0.24rem;
+  border-bottom: 1px #e2e2e2 solid;
+}
+ul.billsinfo > li > span.cname {
+  flex: 1;
+  padding-right: 10px;
+  color: #333;
+}
+ul.billsinfo > li > span.cvalue {
+  width: 1.5rem;
+  word-wrap: break-word;
+  text-align: right;
+  color: #999;
+}
+.inmenu {
+  position: fixed;
+  bottom: 0;
+  z-index: 998;
+  border: 1px #ccc solid;
+  width: 100%;
+  font-size: 0.28rem;
+  height: 52px;
+  line-height: 52px;
+  text-align: center;
+  border-width: 1px 1px 0 1px;
+}

@@ -1,0 +1,100 @@
+/*common*/
+*{margin: 0;padding: 0;box-sizing:border-box;-webkit-box-sizing:border-box;}
+body{font-family: Helvetica;}
+ol,ul,li{list-style-type: none;}
+a{
+	outline: none;
+	color: #666;
+	text-decoration: none;
+	&:foucus{
+		outline: none;
+	}
+	&:hover{
+		color: #333;
+	}
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfix{
+	&:before,
+	&:after
+	{
+		clear: both;
+		content: '';
+	}
+}
+
+
+//variable
+@bgcolor:#ececec;
+@txcolor: #333;
+@light-tx-color:#999;
+@headhigh:52px;
+@lihigh:42px;
+//extend
+.padd10{
+	padding: 0 10px;
+}
+.martop{
+	margin-top: @headhigh + 10px;
+}
+.iheader{
+	&:extend(.padd10);
+	width: 100%;
+	height: @headhigh;
+	background-color: @bgcolor;
+	position: fixed;
+	top: 0px;
+	z-index: 999;
+	h3{
+		font-size: 0.28rem;
+		color: @txcolor;
+		line-height: @headhigh;
+	}
+}
+
+.maincon{
+	&:extend(.martop);
+}
+
+ul.billsinfo{
+	&:extend(.clearfix , .padd10);
+	& > li{
+		display: flex;
+		display: -webkit-flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		line-height: @lihigh;
+		font-size: 0.24rem;
+		border-bottom: 1px #e2e2e2 solid;
+		&>span.cname{
+			flex: 1;
+			padding-right: 10px;
+			color: @txcolor;
+		}
+		& > span.cvalue{
+			width: 1.5rem;
+			word-wrap: break-word;
+			text-align: right;
+			color: @light-tx-color;
+		}
+	}
+}
+
+.inmenu{
+	position: fixed;
+	bottom: 0;
+	z-index: 998;
+	border: 1px #ccc solid;
+	width: 100%;
+	font-size: 0.28rem;
+	height:@headhigh;
+	line-height: @headhigh;
+	text-align: center;
+	border-width: 1px 1px 0 1px;
+}
